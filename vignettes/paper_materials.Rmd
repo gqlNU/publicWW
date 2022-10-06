@@ -1,0 +1,25 @@
+---
+title: "Modelling COVID-19 in Wastewater: Paper Materials"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(publicWW)
+library(xtable)
+```
+
+This vignette describes the materials needed for the [Modelling COVID-19 in Wastewater overleaf paper](https://www.overleaf.com/1992736979qrnrxdgvsfxs). 
+
+The vignette takes us through the covariates used and the main predictions. 
+
