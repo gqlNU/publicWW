@@ -72,7 +72,9 @@ The links below provide the iteration-level predictions at LTLA, CCG, region and
 - [Region predictions](https://livenorthumbriaac-my.sharepoint.com/:u:/g/personal/guangquan_li_northumbria_ac_uk/EawmudokolNCjMLDzmvyzmEBUYpkhYrO4Ih5ycp1eR9oig?e=KKC2P4)
 - [Country predictions](https://livenorthumbriaac-my.sharepoint.com/:u:/g/personal/guangquan_li_northumbria_ac_uk/EcM65OsrhJdEqGrZSe98VG0Bxq0fkaaXgcYgt_K9oZmAvQ)
 
-Download the files and use the following script to produce the figures in the paper
+- [The England LTLA shapefile](https://livenorthumbriaac-my.sharepoint.com/:u:/g/personal/guangquan_li_northumbria_ac_uk/EWkFrGmxWGFNreJX8EZ34koBKiheoJKJtxuGWM3xqXKotA?e=hkCWUT)
+
+Download the files above and use the following script to produce the figures in the paper
 [inst/scripts/results4paper_onGit.R](inst/scripts/results4paper_onGit.R)
 
 
