@@ -590,6 +590,23 @@ get_weekly_genomics_data <- function(ww ,syears = NULL, smonths = NULL, analysis
   agg_df <- lapply(gen_covars, aggregate_time_simple, ww.dat=gendat, analysis_unit=analysis_unit, log_e_y=FALSE) %>%
     purrr::reduce(dplyr::left_join, by = c("site_index", "time_index","week","day1week","uwwCode","month","year","RegionName"))
 
+  # summary of data availability at the weekly-site level
+  ll <- NULL
+  for (i in unique(agg_df$time_index)) {
+	tmp <- subset(agg_df,agg_df$time_index==i)
+	ll <- c(ll,length(which(is.na(tmp$num_snp)==FALSE)))
+  }
+  print("number of sites (out of 303 in total) with num_snp measurements across the 44 weeks")
+  print(ll)
+
+  ll <- NULL
+  for (i in unique(agg_df$time_index)) {
+	tmp <- subset(agg_df,agg_df$time_index==i)
+	ll <- c(ll,length(which(is.na(tmp$pct_genome_coverage)==FALSE)))
+  }
+  print("number of sites (out of 303 in total) with pct_genome_coverage measurements across the 44 weeks")
+  print(ll)
+	
   # At the national level, take the average, linear interpolate missing values.
   #and assign them to the site-level
   agg_df <- agg_df %>% group_by(time_index)  %>%
